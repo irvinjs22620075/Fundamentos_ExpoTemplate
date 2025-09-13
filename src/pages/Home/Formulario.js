@@ -9,6 +9,11 @@ export default function Formulario() {
             <TextInput style={style.input} placeholder="Escribe tu nombre" />
             <Text style={style.label}>Descripcion</Text>
             <TextInput multiline={true} numberOfLines={4} style={[style.input, style.textArea]} placeholder="Escribe tu personalidad" />
+            <Text style={style.label}>Correo Electronico</Text>
+            <TextInput style={style.input} placeholder="Ingrese el correo" keyboardType='email-address' />
+            <Text style={style.label}>Contraseña</Text>
+            <TextInput style={style.input} placeholder="Ingrese la contraseña" secureTextEntry={true} />
+        
         </SafeAreaView>
 
     );
@@ -16,7 +21,7 @@ export default function Formulario() {
 const style = StyleSheet.create({
     mainS: {
         flex: 1,
-        backgroundColor: '#d8cad3ff',
+        backgroundColor: '#ffffffff',
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 44,
         padding: 16,
     },
@@ -27,7 +32,7 @@ const style = StyleSheet.create({
     },
     input: {
         borderWidth: 1,
-        borderColor: '#fff',
+        borderColor: '#6d6d6dff',
         borderRadius: 10,
         backgroundColor: '#fff',
 
