@@ -3,13 +3,15 @@ import Home from "./src/pages/Home/Home";
 import BotonesV2 from "./src/pages/Home/BotonesV2";
 import HomePrincipal from "./src/pages/Home/HomePrincipal";
 import Formulario from "./src/pages/Home/Formulario";
+import FormularioV2 from "./src/pages/Home/FormularioV2";
 export default function App() {
   return (
   //  <Home/>
   // <Botones/>
   //  <BotonesV2/>
   // <HomePrincipal/>
-  <Formulario/>
+  // <Formulario/>
+  <FormularioV2/>
   );
 }
 
