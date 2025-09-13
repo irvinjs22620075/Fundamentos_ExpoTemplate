@@ -8,7 +8,7 @@ export default function Formulario() {
             <Text style={style.label}>Nombre</Text>
             <TextInput style={style.input} placeholder="Escribe tu nombre" />
             <Text style={style.label}>Descripcion</Text>
-            <TextInput style={[style.input, style.textArea]} placeholder="Escribe tu personalidad" />
+            <TextInput multiline={true} numberOfLines={4} style={[style.input, style.textArea]} placeholder="Escribe tu personalidad" />
         </SafeAreaView>
 
     );
@@ -35,7 +35,7 @@ const style = StyleSheet.create({
     textArea:{
        height:100,
        textAlignVertical:'top',
-        
+
     }
 
 });
