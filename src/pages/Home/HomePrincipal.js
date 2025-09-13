@@ -2,6 +2,7 @@
 import { StyleSheet, View, Text, Platform, StatusBar } from 'react-native';
 import CardBasico from '../../components/CardBasico';   
 import CardImg from '../../components/CardImg';
+import CardV2 from '../../components/CardV2';
 
 export default function HomePrincipal() {
     return (
@@ -9,6 +10,7 @@ export default function HomePrincipal() {
           <Text style={style.title}>Pagina Principal</Text> 
           <CardBasico/>
           <CardImg/>
+          <CardV2/>
         </View>
     );
 }

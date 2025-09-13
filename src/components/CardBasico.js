@@ -26,7 +26,7 @@ const style = StyleSheet.create({
   },
   contenido: {
     marginTop: 4,
-    textAlign:'center',
+    textAlign:'justify',
     fontSize: 14,
     color: '#333',
   },
