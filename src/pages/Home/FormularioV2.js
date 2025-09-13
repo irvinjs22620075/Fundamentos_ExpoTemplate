@@ -11,6 +11,9 @@ export default function FormularioV2() {
             <ScrollView>
               
                 <View style={style.container}>
+                    <TouchableOpacity style={style.cerrarBoton}>
+                        <Icon name="close" size={20} color={'#ffffffff'}/>
+                    </TouchableOpacity>
                     <Image style={{ width: 150, height: 150, borderRadius: 80, }} source={{ uri: 'https://img.freepik.com/premium-vector/anime-cartoon-character-vector-illustration_648489-34.jpg?w=2000' }} />
                     <Text style={style.name}>Irvin Jimenez</Text>
                     <View style={style.Infocontainer}>
@@ -77,7 +80,7 @@ const style = StyleSheet.create({
         fontSize: 16,
         marginBottom: 10,
         borderRadius:20,
-        backgroundColor:'#e48686ff',
+        backgroundColor:'#f0be74ff',
         padding:5,
 
     },
@@ -99,7 +102,7 @@ const style = StyleSheet.create({
         padding: 10,
     },
     botonConIcono: {
-        backgroundColor: '#477fd3ff',
+        backgroundColor: '#1e56aaff',
         marginTop: 10,
         flexDirection: 'row',
         alignContent: 'center',
@@ -121,5 +124,17 @@ const style = StyleSheet.create({
 
 
     },
+    cerrarBoton:{
+        position:'absolute',
+        top:15,
+        right:15,
+        // zIndex:10,
+        borderRadius:30,
+        backgroundColor:'#c90707ff',
+        width:25,
+        height:25,
+        justifyContent:'center',
+        alignItems:'center',
+    }
 
 });
