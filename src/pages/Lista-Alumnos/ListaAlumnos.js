@@ -1,5 +1,6 @@
 import { StyleSheet, View, Platform, StatusBar, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, } from "react-native";
-import Icon from 'react-native-vector-icons/MaterialIcons';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
@@ -8,7 +9,7 @@ export default function ListaAlumnos() {
       <SafeAreaView style={style.mainS}>
          {/* Inicio de Appbar */}
          <View style={style.appBar}>
-            <Icon name="arrow-left" size={30} color={'#000'} />
+            <Icon name="arrow-left" size={20} color={'#000'} />
             <Text style={style.appBarTitle}>Lista de Usuarios</Text>
             <View style={{ width: 20 }}></View>
 
@@ -30,23 +31,41 @@ export default function ListaAlumnos() {
                </View>
             </View>
             ))}
-            
+
          </ScrollView>
          {/* Cierre de lista de alumnos */}
+
+            {/* Inicio de NavBar */}
+            <View style={style.navbar}>
+               <View style={style.navItem}>
+                  <Icon name="home" marginTop={10} size={20} color ={"#fff"}/>
+                  <Text style={style.navText}>Inicio</Text>
+               </View>
+               <View style={style.navItem}>
+                  <Icon name="save"  marginTop={10} size={20} color ={"#fff"}/>
+                  <Text style={style.navText}>Guardar</Text>
+               </View>
+               <View style={style.navItem}>
+                  <Icon name="send" marginTop={10} size={20} color ={"#fff"}/>
+                  <Text style={style.navText}>Enviar</Text>
+               </View>
+               
+            </View>
+            {/* Cierre de NavBar */}
       </SafeAreaView>
    )
 }
 const style = StyleSheet.create({
    mainS: {
       flex: 1,
-      backgroundColor: '#ffffffff',
+      backgroundColor: '#e0e8ebff',
       paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 44,
       //  padding: 16,
    },
    appBar: {
       height: 50,
       width: '100%',
-      backgroundColor: '#7bbd94ff',
+      backgroundColor: '#7ba3bdff',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
@@ -58,7 +77,7 @@ const style = StyleSheet.create({
    },
    sectionTitle:{
       padding:16,
-      fontSize:14,
+      fontSize:16,
       fontWeight:'bold',
    },
    card:{
@@ -98,7 +117,7 @@ const style = StyleSheet.create({
       backgroundColor: '#1e56aaff',
         marginTop: 10,
         padding:10,
-        alignSelf:'flex-start',
+        alignSelf:'flex-end',
         paddingVertical: 6,
         borderRadius: 15,
         
@@ -106,6 +125,25 @@ const style = StyleSheet.create({
    saveButtonText:{
       color: '#ffffffff',
         fontWeight: 'bold',
+   },
+   navbar:{
+      flexDirection:'row',
+      justifyContent:'space-around',
+      alignContent:'center',
+      height:70,
+      backgroundColor: '#7ba3bdff',
+      // borderTopWidth:1,  
+      // marginBottom:10,
+   },
+   navInfo:{
+     alignItems:'center',
+     
+   },
+   navText:{
+      fontSize:12,
+      color:'#000000ff',
+      marginTop:4,
+
    },
 
 });
