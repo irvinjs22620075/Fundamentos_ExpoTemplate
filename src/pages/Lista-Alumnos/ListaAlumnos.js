@@ -17,18 +17,20 @@ export default function ListaAlumnos() {
          {/* Inicio de contenido lista de alumnos */}
          <ScrollView style={{padding:14}}>
             <Text style={style.sectionTitle}>Alumnos de Aplicaciones Moviles</Text>
-            <View style={style.card}>
+            
+            { [1,2,3,4,5,6,7].map(( )=> (
+               <View style={style.card}>
                <Image style={style.avatar} source={{ uri: 'https://img.freepik.com/premium-vector/anime-cartoon-character-vector-illustration_648489-34.jpg?w=2000' }} />
                <View style={style.cadInfo}>
                   <Text style={style.userName}>Irvin Jimenez</Text>
-                  <Text style={style.userDetails}>Ing. Sistemas computacionales</Text>
+                  <Text style={style.userDetails}>Ing. en Sistemas computacionales</Text>
                   <TouchableOpacity style={style.saveButton}>
                      <Text style={style.saveButtonText}>Ver mas</Text>
                   </TouchableOpacity>
-
                </View>
-
             </View>
+            ))}
+            
          </ScrollView>
          {/* Cierre de lista de alumnos */}
       </SafeAreaView>
@@ -58,7 +60,6 @@ const style = StyleSheet.create({
       padding:16,
       fontSize:14,
       fontWeight:'bold',
-
    },
    card:{
       padding:16,
@@ -69,27 +70,42 @@ const style = StyleSheet.create({
       margin:5,
    },
    avatar:{
-      width: 60,
-        height: 60,
+      width: 70,
+        height: 70,
         borderRadius:50,
         marginBotton: 28,
         marginRight:12,
         
    },
    cardInfo:{
-
+      flex:1,
+      justifyContent:'center',
    },
    userName:{
-
+       
+        fontWeight: 'bold',
+        fontSize: 16,
+        marginBottom: 10,
    },
    userDetails:{
-
+  
+        fontWeight: 'bold',
+        fontSize: 16,
+        marginBottom: 10,
+      
    },
    saveButton:{
-
+      backgroundColor: '#1e56aaff',
+        marginTop: 10,
+        padding:10,
+        alignSelf:'flex-start',
+        paddingVertical: 6,
+        borderRadius: 15,
+        
    },
    saveButtonText:{
-
+      color: '#ffffffff',
+        fontWeight: 'bold',
    },
 
 });
